@@ -1,11 +1,15 @@
-// A working food-picture-01 entry (Node 22, standard library only): its picture is the entry.png beside this file, and
-// the program copies it to /output/entry.png. A starting point, not a winner: replace the image. The gate takes a
-// whole PNG or JPEG of at most 1 MiB and 1024 by 1024 pixels, and the judge sees exactly the bytes copied.
-//
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// food-picture-01 entry: steaming tonkotsu ramen, tall glossy noodle pull,
+// molten ajitama egg. The picture (entry.png beside this file, 1024x1024
+// JPEG bytes, 237,630 bytes) is copied verbatim to /output/entry.png.
+// Copying (not redrawing) keeps the entry byte-identical on every run: the
+// harness runs the program twice and both runs must write the same bytes.
+// The picture follows this competition's winning formula (tonkotsu noodle
+// pull, steam, dark table) with one change: the molten egg is the hero.
+// entry.png is resolved next to this script, not from the working directory.
+import { copyFileSync, mkdirSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
-import { copyFileSync } from 'node:fs';
-import { join } from 'node:path';
-
-copyFileSync(new URL('./entry.png', import.meta.url), join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.png'));
+const entryPng = fileURLToPath(new URL("entry.png", import.meta.url));
+const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+mkdirSync(outDir, { recursive: true });
+copyFileSync(entryPng, `${outDir}/entry.png`);
