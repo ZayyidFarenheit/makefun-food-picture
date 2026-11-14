@@ -7,8 +7,9 @@ a tall glossy noodle pull, charred chashu, a halved ajitama egg with its yolk
 dripping, chili-oil swirls in the creamy broth, nori, spring onion and sesame.
 
 The program copies the deterministic picture (`entry.png`, 1024x1024 JPEG,
-234,013 bytes) to `/output/entry.png`. The picture is AI-generated from the
+226,907 bytes) to `/output/entry.png`. The picture is AI-generated from the
 winning formula of this competition's top entries (tonkotsu noodle pull,
-steam, dark table) with one change: glistening broth droplets falling from
-the lifted noodles, so the pull looks freshly lifted and alive. (v1, replaced:
-the molten egg as hero.)
+steam, dark table) with one change: the maximum-action moment — the tallest
+glossy noodle pull, glistening broth droplets falling, the yolk caught
+mid-drip, and strong backlit steam. (v1, replaced: the molten egg as hero.
+Round 2, replaced: broth droplets on the rank-1 composition.)
